@@ -3,54 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple JS App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Simple Test App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Simple JavaScript App</h1>
-            <p>A modern web application with HTML, CSS, and JavaScript</p>
-        </header>
+        <h1>Simple Test App</h1>
+        <p>This is a basic test application</p>
         
-        <main>
-            <div class="card">
-                <h2>Counter</h2>
-                <div class="counter-display">
-                    <span id="counter">0</span>
-                </div>
-                <div class="counter-controls">
-                    <button id="decrease" class="btn btn-danger">-</button>
-                    <button id="reset" class="btn btn-secondary">Reset</button>
-                    <button id="increase" class="btn btn-success">+</button>
-                </div>
-            </div>
-            
-            <div class="card">
-                <h2>Todo List</h2>
-                <div class="todo-input">
-                    <input type="text" id="todoInput" placeholder="Enter a new task...">
-                    <button id="addTodo" class="btn btn-primary">Add</button>
-                </div>
-                <ul id="todoList" class="todo-list">
-                    <!-- Todo items will be added here -->
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h2>Color Generator</h2>
-                <div class="color-display" id="colorDisplay">
-                    <span id="colorText">#FFFFFF</span>
-                </div>
-                <button id="generateColor" class="btn btn-primary">Generate Color</button>
-            </div>
-        </main>
+        <div id="counter">0</div>
         
-        <footer>
-            <p>&copy; 2024 Simple JS App. Built with ❤️</p>
-        </footer>
+        <button onclick="increment()">+</button>
+        <button onclick="decrement()">-</button>
+        <button onclick="reset()">Reset</button>
     </div>
-    
-    <script src="script.js"></script>
+
+    <script>
+        let count = 0;
+        
+        function increment() {
+            count++;
+            updateDisplay();
+        }
+        
+        function decrement() {
+            count--;
+            updateDisplay();
+        }
+        
+        function reset() {
+            count = 0;
+            updateDisplay();
+        }
+        
+        function updateDisplay() {
+            document.getElementById('counter').textContent = count;
+        }
+    </script>
 </body>
 </html>
