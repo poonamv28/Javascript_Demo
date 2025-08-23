@@ -13,7 +13,11 @@ pipeline {
             steps {
                 echo 'Testing the app...'
                 script {
-                    sh 'echo "App is working fine!"'
+                    if (isUnix()) {
+                        sh 'echo "App is working fine!"'
+                    } else {
+                        bat 'echo "App is working fine!"'
+                    }
                 }
             }
         }
@@ -22,7 +26,11 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 script {
-                    sh 'echo "Deployed successfully!"'
+                    if (isUnix()) {
+                        sh 'echo "Deployed successfully!"'
+                    } else {
+                        bat 'echo "Deployed successfully!"'
+                    }
                 }
             }
         }
