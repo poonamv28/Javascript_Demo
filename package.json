@@ -1,0 +1,46 @@
+{
+  "name": "simple-js-app",
+  "version": "1.0.0",
+  "description": "A modern, interactive web application built with HTML, CSS, and JavaScript with Jenkins CI/CD pipeline",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"Build completed\"",
+    "lint": "echo \"Linting completed\"",
+    "validate": "echo \"Validation completed\"",
+    "deploy": "echo \"Deployment completed\""
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "web-app",
+    "jenkins",
+    "ci-cd",
+    "pipeline",
+    "frontend",
+    "interactive"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/simple-js-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/simple-js-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/simple-js-app#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

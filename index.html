@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JS App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simple JavaScript App</h1>
+            <p>A modern web application with HTML, CSS, and JavaScript</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <h2>Counter</h2>
+                <div class="counter-display">
+                    <span id="counter">0</span>
+                </div>
+                <div class="counter-controls">
+                    <button id="decrease" class="btn btn-danger">-</button>
+                    <button id="reset" class="btn btn-secondary">Reset</button>
+                    <button id="increase" class="btn btn-success">+</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Todo List</h2>
+                <div class="todo-input">
+                    <input type="text" id="todoInput" placeholder="Enter a new task...">
+                    <button id="addTodo" class="btn btn-primary">Add</button>
+                </div>
+                <ul id="todoList" class="todo-list">
+                    <!-- Todo items will be added here -->
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Color Generator</h2>
+                <div class="color-display" id="colorDisplay">
+                    <span id="colorText">#FFFFFF</span>
+                </div>
+                <button id="generateColor" class="btn btn-primary">Generate Color</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Simple JS App. Built with ❤️</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
