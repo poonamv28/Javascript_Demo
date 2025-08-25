@@ -43,7 +43,7 @@ pipeline {
                 echo 'Development build successful. Triggering Cypress tests after 5 minutes...'
                 
                 // Wait 5 minutes then trigger downstream job
-                sleep(time: 5, unit: 'MINUTES')
+                sleep(time: 2, unit: 'MINUTES')
                 
                 // Trigger the Cypress pipeline
                 build job: 'test2', 
