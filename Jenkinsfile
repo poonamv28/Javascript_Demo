@@ -36,12 +36,26 @@ pipeline {
         }
     }
     
+  
     post {
         success {
-            echo '✅ Pipeline completed!'
+            script {
+                echo 'Development build successful. Triggering Cypress tests after 5 minutes...'
+                
+                // Wait 5 minutes then trigger downstream job
+                sleep(time: 5, unit: 'MINUTES')
+                
+                // Trigger the Cypress pipeline
+                build job: 'test2', 
+                      wait: false, 
+                      parameters: [
+                          string(name: 'BUILD_NUMBER', value: "${env.BUILD_NUMBER}"),
+                          string(name: 'GIT_COMMIT', value: "${env.GIT_COMMIT}")
+                      ]
+            }
         }
         failure {
-            echo '❌ Pipeline failed!'
+            echo 'Development build failed. Cypress tests will not run.'
         }
     }
 }
